@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <nav className='sm:flex sm:justify-between'>
-            <div className='flex items-center justify-between sm:px-10 sm:py-5 px-4 py-5 '>
+            <div className='flex items-center justify-between sm:px-10 sm:py-15 px-4 py-5 '>
                 {/* for sm and large screens */}
                 <div className='flex justify-between  font-serif text-gray-200'>
                     <h1 className='text-lg md:text-4xl font-semibold'>IronTheDress</h1>
@@ -30,7 +30,7 @@ const Header = () => {
             </div>
 
             
-                <div className={`px-3  pb-4 space-y-2 sm:block ${open ? 'block' : 'hidden'} sm:justify-center sm:items-center sm:py-5 sm:px-10`}>
+                <div className={`px-3  pb-4 space-y-2 sm:block ${open ? 'block' : 'hidden'} sm:justify-center sm:items-center sm:py-10 sm:px-10`}>
                     <Link href="#" className='block font-serif rounded text-white hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>Home</Link>
                     <Link href="#" className='block font-serif rounded hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>IronSpace</Link>
                 </div>
