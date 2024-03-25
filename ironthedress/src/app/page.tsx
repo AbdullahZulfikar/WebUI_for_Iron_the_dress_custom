@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -68,6 +69,7 @@ export default function Home() {
           </div>
         </CardBody>
       </CardContainer>
+      <Footer/>
       </div>
     </main>
   );
