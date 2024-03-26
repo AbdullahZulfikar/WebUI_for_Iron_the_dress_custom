@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import { useState } from 'react';
+import Header from '@/components/header';
 
 export default function Generate() {
   const [inputImage, setInputImage] = useState(null);
@@ -58,8 +59,11 @@ export default function Generate() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <form onSubmit={handleSubmit}>
+    <main className="flex min-h-screen">
+      <div>
+        <div><header/></div>
+      
+      {/* <form onSubmit={handleSubmit}>
         <label htmlFor='input_image'>Input Image</label>
         <input id='input_image' type="file" accept="image/*" onChange={handleInputImage} />
         <label htmlFor='mask_image'>Mask Image</label>
@@ -76,7 +80,8 @@ export default function Generate() {
       loading && (
         <p>{`Generating Image (this may take approx 2 min)...`}</p>
       )
-      }
+      } */}
+      </div>
     </main>
   );
 }
