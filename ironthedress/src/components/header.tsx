@@ -31,8 +31,8 @@ const Header = () => {
 
             
                 <div className={`px-3  pb-4 space-y-2 sm:block ${open ? 'block' : 'hidden'} sm:justify-center sm:items-center sm:py-10 sm:px-10`}>
-                    <Link href="#" className='block font-serif rounded text-white hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>Home</Link>
-                    <Link href="#" className='block font-serif rounded hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>IronSpace</Link>
+                    <Link href="/" className='block font-serif rounded text-white hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>Home</Link>
+                    <Link href="/iron-space" className='block font-serif rounded hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>IronSpace</Link>
                 </div>
             
         </nav>
