@@ -10,6 +10,7 @@ const Header = () => {
     }
 
     return (
+<<<<<<< HEAD
         <nav className='sm:flex sm:justify-between'>
             <div className='flex items-center justify-between sm:px-10 sm:py-15 px-4 py-5 '>
                 {/* for sm and large screens */}
@@ -35,6 +36,17 @@ const Header = () => {
                     <Link href="/iron-space" className='block font-serif rounded text-white hover:bg-yellow-500 px-2 sm:inline-block sm:px-4'>IronSpace</Link>
                 </div>
             
+=======
+        <nav className='flex justify-between items-center py-5 sticky px-10 bg-white'>
+                <Link href="/">
+                    <h1 className='text-lg md:text-4xl font-bold'>IronTheDress</h1>
+                </Link>
+                <Link href="/iron-space" className='rounded bg-black text-white px-2 py-2 sm:px-4'>
+                    <h1>
+                        IronSpace
+                    </h1>
+                </Link>
+>>>>>>> feae6d5b57f395f130f06b5c4993a3bb748a69c9
         </nav>
     )
 }

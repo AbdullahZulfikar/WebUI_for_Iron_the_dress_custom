@@ -14,8 +14,12 @@ export default function Home() {
 
 
   return (
+<<<<<<< HEAD
     <main className=" flex flex-col min-h-screen ">
       <Header />
+=======
+    <main className="flex flex-col min-h-screen ">
+>>>>>>> feae6d5b57f395f130f06b5c4993a3bb748a69c9
       <div className="">
         {/* wavy background */}
       <WavyBackground className="max-w-4xl mx-auto pb-40 ">
@@ -26,6 +30,9 @@ export default function Home() {
           <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
             Leverage the power of AI to Iron the dress
           </p>
+          <Link href="/iron-space">
+            <button className="bg-white text-black px-4 py-2 rounded-lg my-4">Get Started</button>
+          </Link>
         </div>
       </WavyBackground>
       </div>
