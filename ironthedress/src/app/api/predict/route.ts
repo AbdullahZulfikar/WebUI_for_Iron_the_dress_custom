@@ -5,8 +5,9 @@ export async function POST(req: NextRequest) {
   if (req.method === 'POST') {
     const data = await req.json();
     const replicate = new Replicate({
-      auth: "your-api-key",
+      auth: "r8_GVlRUmvWt5bur5nECwmbfGO8TcK5Cv64A9riQ",
     });
+
     const output = await replicate.run(
       "shivansh-yadav13/iron-the-dress:33757df23f3c36414a02ae99701f1c2dd1d4c3eddd29b5ae04fa0ed145044441",
       {

@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen ">
-      <Header />
       <div className="">
         {/* wavy background */}
       <WavyBackground className="max-w-4xl mx-auto pb-40 ">
@@ -26,6 +25,9 @@ export default function Home() {
           <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
             Leverage the power of AI to Iron the dress
           </p>
+          <Link href="/iron-space">
+            <button className="bg-white text-black px-4 py-2 rounded-lg my-4">Get Started</button>
+          </Link>
         </div>
       </WavyBackground>
       </div>
