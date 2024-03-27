@@ -64,7 +64,7 @@ const IronSpace = () => {
 
 
   return (
-    <main className='flex flex-col min-h-screen'>
+    <main className='bg-black flex flex-col min-h-screen'>
       <Header/>
       <h1 className='text-base flex font-mono justify-center'>Upload your Image and mask</h1>
       <div className=' px-4 mx-auto py-10'>
