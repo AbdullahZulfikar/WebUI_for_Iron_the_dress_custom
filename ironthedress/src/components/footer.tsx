@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="text-center h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3 ">
+    <footer className="text-center text-black h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3 ">
       <div>
         Powered by{' '}
         <a
@@ -14,25 +14,25 @@ export default function Footer() {
         </a>
         and{' '}
         <a
-          href="https://www.linkedin.com/in/abdullah-zulfiqar-8808a8251/"
+          href="https://github.com/Team-Iron-The-Dress"
           target="_blank"
           className="font-bold transition hover:text-black/50"
         >
-          Abdullah Zulfiqar
+          Team Iron the dress
         </a>
         . Created by{' '}
         <a
-          href="https://www.twitter.com/nutlope"
+          href="#"
           target="_blank"
           className="font-bold transition hover:text-black/50"
         >
-          Abdullah Zulfiqar
+          Team Iron the dress
         </a>{' '}
-        (abdullahzulfiqar123apple@gmail.com).
+        (@Team-Iron-The-Dress).
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://twitter.com/Abdulla_myself"
+          href="#"
           className="group"
           aria-label="TaxPal on Twitter"
         >

@@ -14,12 +14,7 @@ export default function Home() {
 
 
   return (
-<<<<<<< HEAD
-    <main className=" flex flex-col min-h-screen ">
-      <Header />
-=======
     <main className="flex flex-col min-h-screen ">
->>>>>>> feae6d5b57f395f130f06b5c4993a3bb748a69c9
       <div className="">
         {/* wavy background */}
       <WavyBackground className="max-w-4xl mx-auto pb-40 ">

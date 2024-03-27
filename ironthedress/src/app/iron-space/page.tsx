@@ -81,8 +81,6 @@ const IronSpace = () => {
   };
 
   return (
-    <main className='bg-black flex flex-col min-h-screen'>
-      <Header/>
     <main className='flex flex-col min-h-screen'>
       <h1 className='text-6xl uppercase font-black text-center'>Iron The Dress</h1>
       <div className='flex flex-col justify-between items-center outline-dashed outline-gray-200 outline-2 px-32 w-1/2 mx-auto mt-10 py-10'>
