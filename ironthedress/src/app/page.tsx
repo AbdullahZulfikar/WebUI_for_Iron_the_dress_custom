@@ -1,3 +1,4 @@
+"use client"
 import ImageDisplay from "@/assets/output.png";
 import Image from 'next/image';
 import Header from "@/components/header";
@@ -5,8 +6,13 @@ import { WavyBackground } from "@/components/ui/wavy-background";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
 import Footer from "@/components/footer";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+  const router = useRouter()
+
+
+
   return (
     <main className="flex flex-col min-h-screen ">
       <Header />
@@ -64,6 +70,7 @@ export default function Home() {
               as="button"
               href="/iron-space"
               className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              onClick={() => router.push('/iron-space')}
             >
               Sign up
             </CardItem>
