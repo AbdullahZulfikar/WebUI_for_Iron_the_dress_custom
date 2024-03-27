@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Developer
 
-Develope by [@Abdullah Zulfiqar and @@Shivansh Yadav](https://github.com/AbdullahZulfikar).
+Develope by [@Abdullah Zulfiqar and @Shivansh Yadav](https://github.com/AbdullahZulfikar).
