@@ -2,10 +2,11 @@ import { NextResponse, NextRequest } from "next/server";
 import Replicate from "replicate";
 
 export async function POST(req: NextRequest) {
+  console.log("Generating Image...")
   if (req.method === 'POST') {
     const data = await req.json();
     const replicate = new Replicate({
-      auth: "r8_GVlRUmvWt5bur5nECwmbfGO8TcK5Cv64A9riQ",
+      auth: "",
     });
 
     const output = await replicate.run(

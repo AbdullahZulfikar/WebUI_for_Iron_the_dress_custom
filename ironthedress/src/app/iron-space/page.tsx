@@ -2,6 +2,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
+import MaskCanvas from '@/components/MaskCanvas';
 
 function base64ToBlob(base64String: string) {
   const byteCharacters = atob(base64String);
@@ -16,10 +17,11 @@ function base64ToBlob(base64String: string) {
 }
 
 const IronSpace = () => {
-  const [inputImage, setInputImage] = useState(null);
-  const [maskImage, setMaskImage] = useState(null);
+  const [inputImage, setInputImage] = useState<string>("");
+  const [maskImage, setMaskImage] = useState<string>("");
+  const [customMaskOption, setCustomMaskOption] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [outputImage, setOutputImage] = useState(null);
+  const [outputImage, setOutputImage] = useState("");
 
   const handleInputImage = (e: any) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -29,30 +31,15 @@ const IronSpace = () => {
         //@ts-ignore
         const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
         setInputImage(base64String);
-        console.log(inputImage)
       }
       reader.readAsDataURL(file);
     }
 
-  };
-
-  const handleMaskImage = (e: any) => {
-    if (e.target.files && e.target.files.length > 0) {
-      const file = e.target.files[0];
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        //@ts-ignore
-        const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
-        setMaskImage(base64String);
-      }
-      reader.readAsDataURL(file);
-    }
   };
 
   const handleSubmit = async () => {
     setLoading(true);
-    if (!inputImage || !maskImage) return;
-
+    if (!inputImage || !maskImage) return;    
     try {
       const response = await fetch("/api/predict", {
         method: "POST",
@@ -70,6 +57,7 @@ const IronSpace = () => {
       setLoading(false);
     }
   };
+
   const handleDownload = () => {
     const blob = base64ToBlob(outputImage!);
     const url = URL.createObjectURL(blob);
@@ -81,7 +69,7 @@ const IronSpace = () => {
   };
 
   return (
-    <main className='flex flex-col min-h-screen'>
+    <main className='flex flex-col min-h-screen mt-20'>
       <h1 className='text-6xl uppercase font-black text-center'>Iron The Dress</h1>
       <div className='flex flex-col justify-between items-center outline-dashed outline-gray-200 outline-2 px-32 w-1/2 mx-auto mt-10 py-10'>
         {outputImage ? (
@@ -106,13 +94,34 @@ const IronSpace = () => {
                   <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Image</label>
                   <input id="picture" type="file" className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium" onChange={handleInputImage} />
                 </div>
-                <div className="grid w-full max-w-xs items-center gap-1.5 py-5">
+                <div className="grid w-full max-w-xs items-center gap-1.5">
+                  <label htmlFor="customMaskOption" className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Masking Options</label>
+                  <select
+                    id="customMaskOption"
+                    className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium"
+                    onChange={(e) => setCustomMaskOption(e.target.value === 'true')}
+                    value={customMaskOption.toString()}
+                  >
+                    <option value="false">AI Region Selector</option>
+                    <option value="true">Manually Select Region</option>
+                  </select>
+                </div>
+                {
+                  !customMaskOption && inputImage &&
+                  <>
+                    <button type="submit" className="bg-black mx-auto text-white font-bold py-2 px-4 rounded">
+                      Submit
+                    </button>
+                  </>
+                }
+                {
+                  customMaskOption && inputImage &&
+                  <MaskCanvas inputImageBase64={inputImage} setLoading={setLoading} setOutputImage={setOutputImage} />
+                }
+                {/* <div className="grid w-full max-w-xs items-center gap-1.5 py-5">
                   <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Mask</label>
                   <input id="picture" type="file" className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium" onChange={handleMaskImage} />
-                </div>
-                <button type="submit" className="bg-black mx-auto text-white font-bold py-2 px-4 rounded" onClick={handleSubmit}>
-                  Submit
-                </button>
+                </div> */}
               </div>
             )
         }
