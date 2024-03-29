@@ -78,7 +78,7 @@ const IronSpace = () => {
     });
 
     if (imgRef.current && canvasRef.current) {
-      imageSegmenter.segment(imgRef.current, (result) => {
+      imageSegmenter.segment(imgRef.current, (result: any) => {
         //@ts-ignore
         const canvas: HTMLCanvasElement = document.getElementById("canvas");
         //@ts-ignore
