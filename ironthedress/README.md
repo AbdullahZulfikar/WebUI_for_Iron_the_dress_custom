@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Iron The Dress
+
+This is the read me of project Iron the dress
+
+Iron the dress is a project where we used AI to remove the wrinkles from the dress.
+
+## Output
+
+    ```markdown
+    ![Image Alt Text](./src/assets/output.png)
+    ```
+
+**Features:**
+
+- Model we use was **SDXL-Turbo from StableDiffusion**
+- Model we trained on lora using [Notebook](https://colab.research.google.com/drive/1ocj7isaZTwsd2j43Fy5RvNDl1F03RLw8?usp=sharing)
+- It was trained on 40 images with classification method like wrinkled and unwrinkled
+- If you want to use [lora-weights](https://drive.google.com/file/d/1TTaR_EmAmgPYIfjXoUIrbMJMA26V1eZ8/view?usp=sharing) here is the link 
+- [Report Papers](https://drive.google.com/file/d/16sNnr_CUgQh95DG_SXpmSkv22pPmZ5lV/view?usp=drive_link)
+  
+If you want to use this repo clone it then use `npm install` to install all required packages
+then follow below steps
 
 ## Getting Started
 
