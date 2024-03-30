@@ -14,6 +14,7 @@ Iron the dress is a project where we used AI to remove the wrinkles from the dre
 - It was trained on 40 images with classification method like wrinkled and unwrinkled
 - If you want to use [lora-weights](https://drive.google.com/file/d/1TTaR_EmAmgPYIfjXoUIrbMJMA26V1eZ8/view?usp=sharing) here is the link 
 - [Report Papers](https://drive.google.com/file/d/16sNnr_CUgQh95DG_SXpmSkv22pPmZ5lV/view?usp=drive_link)
+- watch [video](https://drive.google.com/file/d/1rtqOiSO7CETs8FnjFB6FImawqT9Ta4b7/view?usp=drive_link) to understand how web app works
   
 If you want to use this repo clone it then use `npm install` to install all required packages
 then follow below steps
