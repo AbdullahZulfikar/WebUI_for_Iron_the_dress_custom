@@ -5,8 +5,7 @@ This is the read me of project Iron the dress
 Iron the dress is a project where we used AI to remove the wrinkles from the dress.
 
 ## Output
-
-    ![Image Alt Text](./src/assets/output.png)
+![Alt Text](./src/assets/output.png)
 
 **Features:**
 
