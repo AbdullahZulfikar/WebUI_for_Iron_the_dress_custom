@@ -6,9 +6,7 @@ Iron the dress is a project where we used AI to remove the wrinkles from the dre
 
 ## Output
 
-    ```markdown
     ![Image Alt Text](./src/assets/output.png)
-    ```
 
 **Features:**
 
